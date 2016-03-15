@@ -17,7 +17,7 @@ public class TextFileChooser {
     }
 
     private void setSettings(){
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text File","*.txt"));
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(".txt","*.txt"));
         fileChooser.setInitialDirectory(new File("/home/damian"));
     }
 

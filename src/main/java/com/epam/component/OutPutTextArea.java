@@ -5,10 +5,10 @@ import javafx.scene.control.TextArea;
 /**
  * Created by damian on 15.03.16.
  */
-public class FileTextArea {
+public class OutPutTextArea {
     private  TextArea fileTextArea;
 
-    public FileTextArea() {
+    public OutPutTextArea() {
         this.fileTextArea =new TextArea();
         setDefault();
     }
