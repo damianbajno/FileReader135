@@ -15,17 +15,19 @@ public class ChooseFileButtonEventHandeler implements EventHandler {
     private Stage primaryStage;
     private FileTextReader fileTextReader;
 
-    public ChooseFileButtonEventHandeler(OutPutTextArea textArea, Stage primarystage) {
+    public ChooseFileButtonEventHandeler(OutPutTextArea outPutTextArea, Stage primarystage) {
         this.primaryStage = primarystage;
 
-        this.fileTextReader = new FileTextReader(textArea);
+        this.fileTextReader = new FileTextReader(outPutTextArea);
         this.textFileChooser = new TextFileChooser();
     }
 
     public void handle(Event event) {
         File file = textFileChooser.showOpenDialog(primaryStage);
-        if (file != null) {
+        if (file != null ) {
             fileTextReader.read(file);
+        } else {
+            System.out.println("Nie podano ścieżki do pliku");
         }
 
     }

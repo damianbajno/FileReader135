@@ -18,12 +18,16 @@ public class OutPutTextArea {
         fileTextArea.setPrefColumnCount(20);
     }
 
-    public void appendText(String text){
-        fileTextArea.appendText(text);
+    public void appendTextToNextLine(String text){
+        fileTextArea.appendText(text+"\n");
     }
 
 
     public TextArea getFileTextArea() {
         return fileTextArea;
+    }
+
+    public void clear() {
+        fileTextArea.clear();
     }
 }
